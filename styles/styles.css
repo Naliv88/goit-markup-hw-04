@@ -138,25 +138,30 @@ img {
     letter-spacing: 0.02em;
     
     color: var(--color-text);
-
-   
+}
+.header-mail-icon{
+    margin-right: 10px;
+    /* display: inline; */
+    fill: currentColor;
+}
+.header-phone-icon{
+    margin-right: 10px;
+    /* display: inline; */
+    fill: currentColor;
+}
+.contact-header-mail{
+    display: flex;
 }
 .contact.header .contact-mail,
 .contact.header .contact-phone{
     padding: 32px 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 .header .contact-phone{
     margin-left: 50px;
 }
-.header-container .contact-phone::before {
-    content:" ";
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: #188CE8;
-    background-image: url('./image/phone.svg');
-}
-
 .contact .contact-mail:hover,
  .contact .contact-mail:focus, 
  .contact .contact-phone:hover, 
@@ -172,8 +177,12 @@ img {
 
     letter-spacing: 0.06em;
 
-   
     padding: 200px 0;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) , rgba(47, 48, 58, 0.4) ), url(../image/bchero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hero-title{
     font-weight: 900;
@@ -219,7 +228,9 @@ img {
     text-align: left;
     
 }
-
+.advantages .list-item:not(:last-child){
+    margin-right: 30px;
+}
 .advantages .list-title{
     font-weight: 700;
     line-height: 1.14;
@@ -232,7 +243,16 @@ img {
     line-height: 1.71;
     margin-top: 10px;
 }
-
+.advantages-icon{
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 /* About */
 .about .list{
     margin-top: 50px;
@@ -245,7 +265,7 @@ img {
     text-align: center;
     
     color: var(--color-title);
-
+    margin-bottom: 50px;
 }
 
 /* Persons */
@@ -255,7 +275,6 @@ img {
 
 }
 .persons .list{
-    margin-top: 50px;
     --items: 4;
 }
 .persons .list-item{
@@ -274,9 +293,70 @@ img {
 .persons .list-text{
     font-size: 16px;
     padding-top: 10px;
+    margin-bottom: 16px;
 }
 .persons .person-descrip{
     padding: 30px 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.social-media{
+    
+    display: flex;
+    justify-content: center;
+}
+.social-media-item:not(:last-child){
+    margin-right: 10px;
+}
+.persons .social-media-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-bg-first);
+    border-radius: 50%;
+
+    fill: #AFB1B8;
+}
+.social-media-link:hover,
+.social-media-link:focus{
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+
+.social-media-link:hover .social-media-icon, .social-media-link:focus .social-media-icon{
+    fill: currentColor;
+}
+
+/* clients */
+
+.clients-list{
+    display: flex;
+   
+}
+.clients-list-item{
+    border: #AFB1B8 solid 2px;
+   border-radius: 4%;
+}
+.clients-list-item:not(:last-child){
+    margin-right: 30px;
+}
+.clients-list-item:hover, .clients-list-item:focus{
+    border-color: #2196F3;
+    color: #2196F3;
+}
+.clients-list-item:hover .client-icon,
+.clients-list-item:focus .client-icon{
+    fill: #2196F3;
+}
+.clients-list-link{
+    display: block;
+    padding: 16px 32px;
+}
+.client-icon{
+    fill: #AFB1B8;
 }
 /* Footer */
 .footer{
@@ -310,7 +390,38 @@ img {
 .footer .container{
     text-align: left;
 }
+.social-footer{
+    display: inline;
+    margin-left: 70px;
+}
+.social-footer .list-title {
+    color: var(--color-bg-first);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;   
+    margin-bottom: 20px;
+}
+.footer-content{
+    display: flex;
 
+}
+.footer .social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color:rgba(255, 255, 255, 0.1);;
+    border-radius: 50%;
+
+    fill: var(--color-bg-first);
+}
+.footer .social-media-link:hover,
+.footer .social-media-link:focus {
+    background-color: var(--color-accent);
+
+}
 
 /* Portfolio */
 
