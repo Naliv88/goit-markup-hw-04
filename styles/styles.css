@@ -141,13 +141,17 @@ img {
 }
 .header-mail-icon{
     margin-right: 10px;
-    /* display: inline; */
+
     fill: currentColor;
+    width: 16px;
+    height: 12px;
 }
 .header-phone-icon{
     margin-right: 10px;
-    /* display: inline; */
+
     fill: currentColor;
+    width: 10px;
+    height: 16px;
 }
 .contact-header-mail{
     display: flex;
@@ -334,11 +338,17 @@ img {
 
 .clients-list{
     display: flex;
-   
+    --items: 6;
+    --indent: 25px;
 }
 .clients-list-item{
-    border: #AFB1B8 solid 2px;
-   border-radius: 4%;
+    border: #AFB1B8 solid 1px;
+    border-radius: 4%;
+    width: calc((100% - var(--indent) * var(--items)) / var(--items));
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .clients-list-item:not(:last-child){
     margin-right: 30px;
@@ -352,11 +362,21 @@ img {
     fill: #2196F3;
 }
 .clients-list-link{
-    display: block;
-    padding: 16px 32px;
+ padding: 16px 32px;
 }
 .client-icon{
     fill: #AFB1B8;
+}
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2);
+}
+
+.card-set-item {
+    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
 }
 /* Footer */
 .footer{
