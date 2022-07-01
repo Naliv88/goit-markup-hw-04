@@ -362,9 +362,10 @@ img {
     fill: #2196F3;
 }
 .clients-list-link{
- padding: 16px 32px;
+ /* padding: 16px 32px; */
 }
 .client-icon{
+    
     fill: #AFB1B8;
 }
 
